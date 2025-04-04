@@ -17,7 +17,8 @@ defmodule PhoenixHelloWorldWeb.Router do
   scope "/", PhoenixHelloWorldWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    get "/", ArticleController, :index
+    get "/articles", ArticleController, :index
   end
 
   # Other scopes may use custom stacks.

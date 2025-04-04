@@ -1,0 +1,11 @@
+<h1 class="text-lg text-brand">
+  Hello Phoenix
+</h1>
+
+<ul class="pt-5">
+  <%= for article <- @articles do %>
+    <li>
+      {article.title}
+    </li>
+  <% end %>
+</ul>
