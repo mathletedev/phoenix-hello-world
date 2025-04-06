@@ -18,7 +18,10 @@ defmodule PhoenixHelloWorldWeb.Router do
     pipe_through :browser
 
     get "/", ArticleController, :index
-    get "/articles", ArticleController, :index
+
+    resources "/articles", ArticleController do
+      resources "/comments", CommentController
+    end
   end
 
   # Other scopes may use custom stacks.
